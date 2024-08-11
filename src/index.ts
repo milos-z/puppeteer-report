@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as core from "./core";
-import { Browser, Page, PDFOptions } from "puppeteer";
+import type { Page, Browser, PDFOptions } from "./types";
 
 /**
  * Convert HTML file to PDF
