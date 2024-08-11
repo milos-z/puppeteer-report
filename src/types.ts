@@ -12,7 +12,7 @@ type InnerParams<T extends unknown[]> = {
 type EvaluateFunc<T extends unknown[]> = (
   ...params: InnerParams<T>
 ) => Awaitable<unknown>;
-
+/**
 export interface Page {
   pdf(options?: PDFOptions): Promise<Buffer>;
   close(): Promise<void>;
@@ -28,7 +28,8 @@ export interface Page {
     ...args: Params
   ): Promise<Awaited<ReturnType<Func>>>;
 }
-
+ 
 export interface Browser {
   newPage(): Promise<Page>;
 }
+**/

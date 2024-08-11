@@ -1,9 +1,9 @@
 
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import terser from '@rollup/plugin-terser';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import typescript from 'rollup-plugin-typescript2';
-import { terser } from 'rollup-plugin-terser';
 
 const tsconfigOverride = { compilerOptions: { module: 'es2015', declaration: false } };
 
@@ -18,6 +18,6 @@ export default {
     plugins: [
         typescript({
             tsconfigOverride
-        }), resolve(), commonjs(), json(), terser()
+        }), nodeResolve(), commonjs(), json(), terser()
     ],
 };
